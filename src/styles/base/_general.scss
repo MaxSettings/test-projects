@@ -1,12 +1,112 @@
-h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
+:root {
+  --main-font: "DINPro";
+  --main-font-m: "DINPro-Medium";
+  --main-font-b: "DINPro-Bold";
+  --add-font: "MyriadPro-Regular";
 }
 
-.container {
-    @include container();
-    @include sm(max-width, rem(510));
-    @include md(max-width, rem(690));
-    @include lg(max-width, rem(930));
-    @include xl(max-width, rem(1110));
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--main-font);
+  font-size: 18px;
+  background-color: #ffffff;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.site-title {
+  font-family: var(--main-font);
+  font-size: 46px;
+  color: #344258;
+  text-transform: uppercase;
+  letter-spacing: -1.15px;
+
+  &--bold {
+    font-family: var(--main-font-b);
+  }
+}
+
+.site-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18.5px;
+  font-family: var(--main-font-b);
+  color: #00264c;
+  text-transform: uppercase;
+  letter-spacing: -0.45px;
+  background-color: transparent;
+  border: 3px solid #00264c;
+
+  &:hover {
+    background-color: rgba(84, 102, 130, 0.33);
+  }
+
+  &--white {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+}
+
+.site-field {
+  width: 100%;
+  height: 55px;
+  padding: 22px 36px;
+  border: 0;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: rgba(33%, 40%, 51%, 0.33);
+
+  &::placeholder {
+    font-family: var(--main-font-m);
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: -0.48px;
+    opacity: 0.78;
+  }
+}
+
+.site-input {
+}
+
+.site-textarea {
+  height: 112px;
+  padding: 24px 36px;
+  resize: none;
+}
+
+// .container {
+//     @include container();
+//     @include sm(max-width, rem(510));
+//     @include md(max-width, rem(690));
+//     @include lg(max-width, rem(930));
+//     @include xl(max-width, rem(1110));
+// }
