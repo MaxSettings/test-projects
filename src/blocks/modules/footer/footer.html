@@ -1,6 +1,6 @@
 <footer class="page-footer">
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid page-footer__inner">
+    <div class="page-footer__row row m-0">
       <div class="col page-footer__content">
         <h2 class="page-footer__title site-title site-title--bold">Контакты</h2>
 
@@ -44,15 +44,16 @@
         <form class="d-flex flex-column align-items-center" action="">
 
           <div class="page-footer__inputs">
-            <input class="site-field site-input" type="text" placeholder="Полное имя">
-            <input class="site-field site-input" type="text" placeholder="E-mail">
-            <input class="site-field site-input" type="text" placeholder="Телефон">
-            <textarea class="site-field site-textarea" name="task" placeholder="Пожалуйста, опишите задачу"></textarea>
+            <input class="site-field site-input" type="text" placeholder="Полное имя" required>
+            <input class="site-field site-input" type="text" placeholder="E-mail" required>
+            <input class="site-field site-input" type="text" placeholder="Телефон" required>
+            <textarea class="site-field site-textarea" name="task" placeholder="Пожалуйста, опишите задачу"
+              required></textarea>
           </div>
 
-          <a class="page-footer__form-link" href="#">Политика обработки персональных данных</a>
+          <a class="page-footer__form-link" href="#" target="_blank">Политика обработки персональных данных</a>
 
-          <button class="site-button site-button--white">Отправить заявку</button>
+          <button class="site-button site-button--white" type="submit">Отправить заявку</button>
 
         </form>
       </div>

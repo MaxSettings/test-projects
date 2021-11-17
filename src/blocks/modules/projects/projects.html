@@ -1,4 +1,4 @@
-<section class="projects container">
+<section class="projects container-fluid">
   <div class="projects__title site-title">Реализованные проекты</div>
 
   <div class="projects__text">
@@ -11,28 +11,100 @@
   </div>
 
   <ul class="projects__list row no-gutters">
-    <li class="projects__item col">
-      @@include("./components/project-item/project-item.html", {
-      "title": "Республика саха",
-      "image": "project-item-img-1.jpg",
-      })
+    <li class="projects__item col-12 col-md-4">
+      <div class="project-item d-flex align-items-end justify-content-center"
+        style="background-image: url(../../../../../img/project-item-img-1.jpg);">
+        <h3 class="project-item__title">Республика саха</h3>
+        <button class="project-item__button site-button site-button--white" data-toggle="modal"
+          data-target="#exampleModal" onclick="updateModalContent('saha')">Подробнее</и>
+      </div>
     </li>
 
-    <li class="projects__item col">
-      @@include("./components/project-item/project-item.html", {
-      "title": "Газпром",
-      "image": "project-item-img-2.jpg",
-      })
+    <li class="projects__item col-12 col-md-4">
+      <div class="project-item d-flex align-items-end justify-content-center"
+        style="background-image: url(../../../../../img/project-item-img-2.jpg);">
+        <h3 class="project-item__title">Газпром</h3>
+        <button class="project-item__button site-button site-button--white" data-toggle="modal"
+          data-target="#exampleModal" onclick="updateModalContent('gasprom')">Подробнее</и>
+      </div>
     </li>
 
-    <li class="projects__item col">
-      @@include("./components/project-item/project-item.html", {
-      "title": "Nokia",
-      "image": "project-item-img-3.jpg",
-      })
+    <li class="projects__item col-12 col-md-4">
+      <div class="project-item d-flex align-items-end justify-content-center"
+        style="background-image: url(../../../../../img/project-item-img-3.jpg);">
+        <h3 class="project-item__title">Nokia</h3>
+        <button class="project-item__button site-button site-button--white" data-toggle="modal"
+          data-target="#exampleModal" onclick="updateModalContent('nokia')">Подробнее</и>
+      </div>
     </li>
   </ul>
 
-  <button class="site-button">Загрузить еще</button>
+  <button class="projects__button site-button">Загрузить еще</button>
+
+  <!-- Modal -->
+  <div class="projects-modal modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Республика саха</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="projects-modal__image">
+            <img class="img-fluid" src="../../../../../img/project-item-img-1.jpg" alt="">
+          </div>
+          <p class="projects-modal__text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse porro fugit iste ut, in saepe, aut ipsa
+            voluptatum, cum fugiat corrupti eum quidem nostrum dolorum autem doloribus dolore officia ea?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </section>
+
+<script>
+  const modalData = {
+    saha: {
+      title: "Республика саха",
+      image: "../../../../../img/project-item-img-1.jpg",
+      text: "Якутия, или Республика Саха – самый крупный по территории регион России и одна из самых крупных административных единиц в мире. Будь Якутия самостоятельным государством, она занимала бы 8-ое место в мире по площади. При этом по численности населения Саха остается одной из самой малозаселенных территорий. На 1 человека здесь приходится почти 3 кв. км. Это обуславливается тем, что почти 40 % земель региона расположены за Северным полярным кругом.",
+    },
+    gasprom: {
+      title: "Газпром",
+      image: "../../../../../img/project-item-img-2.jpg",
+      text: "Публичное акционерное общество «Газпром» (ПАО «Газпром») — российская транснациональная энергетическая компания, более 50 % акций которой принадлежит государству. Является холдинговой компанией Группы «Газпром». Непосредственно ПАО «Газпром» осуществляет только продажу природного газа и сдаёт в аренду свою газотранспортную систему.",
+    },
+    nokia: {
+      title: "Nokia",
+      image: "../../../../../img/project-item-img-3.jpg",
+      text: "Nokia Corporation (фин. Nokia Oyj, произносится но́киа) — финская транснациональная компания, производитель телекоммуникационного оборудования для мобильных, фиксированных, широкополосных и IP-сетей. В 2000-е годы доминировала на мировом рынке мобильных телефонов (с 2013 года телефоны под маркой Nokia выпускаются другими производителями).",
+    },
+  };
+
+  const updateModalContent = (projectName) => {
+    const modal = document.querySelector(".modal");
+    console.log(projectName);
+    modal.querySelector(".modal-content").innerHTML = `
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">${modalData[projectName].title}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="projects-modal__image">
+          <img class="img-fluid" src="${modalData[projectName].image}" alt="">
+        </div>
+        <p class="projects-modal__text">
+          ${modalData[projectName].text}
+        </p>
+      </div>
+    </div>`;
+  };
+</script>
