@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gulp-scss-starter</title>
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+
+</head>
+
+<body class="d-flex flex-column">
+  <main>
+    <section class="projects container-fluid">
+  <div class="projects__title site-title">Реализованные проекты</div>
+
+  <div class="projects__text">
+    <p>Коммуникационное агентство – часть многофункционального холдинга, объединяющего различные
+      компании на территории России и ближнего зарубежья.</p>
+    <p>Наши подходы к организации бизнеса и имеющиеся ресурсы позволяют одинаково эффективно
+      обеспечивать реализацию как крупномасштабных федеральных или международных проектов, так и решать небольшие
+      локальные задачи. Мы находимся в постоянном развитии, расширяя и укрепляя имеющиеся бизнес-направления, а также
+      формируя новые.</p>
+  </div>
+
+  <ul class="projects__list row no-gutters">
+    <li class="projects__item col-12 col-md-4">
+      <div class="project-item d-flex align-items-end justify-content-center"
+        style="background-image: url(../../../../../img/project-item-img-1.jpg);">
+        <h3 class="project-item__title">Республика саха</h3>
+        <button class="project-item__button site-button site-button--white" data-toggle="modal"
+          data-target="#exampleModal" onclick="updateModalContent('saha')">Подробнее</и>
+      </div>
+    </li>
+
+    <li class="projects__item col-12 col-md-4">
+      <div class="project-item d-flex align-items-end justify-content-center"
+        style="background-image: url(../../../../../img/project-item-img-2.jpg);">
+        <h3 class="project-item__title">Газпром</h3>
+        <button class="project-item__button site-button site-button--white" data-toggle="modal"
+          data-target="#exampleModal" onclick="updateModalContent('gasprom')">Подробнее</и>
+      </div>
+    </li>
+
+    <li class="projects__item col-12 col-md-4">
+      <div class="project-item d-flex align-items-end justify-content-center"
+        style="background-image: url(../../../../../img/project-item-img-3.jpg);">
+        <h3 class="project-item__title">Nokia</h3>
+        <button class="project-item__button site-button site-button--white" data-toggle="modal"
+          data-target="#exampleModal" onclick="updateModalContent('nokia')">Подробнее</и>
+      </div>
+    </li>
+  </ul>
+
+  <button class="projects__button site-button">Загрузить еще</button>
+
+  <!-- Modal -->
+  <div class="projects-modal modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Республика саха</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="projects-modal__image">
+            <img class="img-fluid" src="../../../../../img/project-item-img-1.jpg" alt="">
+          </div>
+          <p class="projects-modal__text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse porro fugit iste ut, in saepe, aut ipsa
+            voluptatum, cum fugiat corrupti eum quidem nostrum dolorum autem doloribus dolore officia ea?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+  const modalData = {
+    saha: {
+      title: "Республика саха",
+      image: "../../../../../img/project-item-img-1.jpg",
+      text: "Якутия, или Республика Саха – самый крупный по территории регион России и одна из самых крупных административных единиц в мире. Будь Якутия самостоятельным государством, она занимала бы 8-ое место в мире по площади. При этом по численности населения Саха остается одной из самой малозаселенных территорий. На 1 человека здесь приходится почти 3 кв. км. Это обуславливается тем, что почти 40 % земель региона расположены за Северным полярным кругом.",
+    },
+    gasprom: {
+      title: "Газпром",
+      image: "../../../../../img/project-item-img-2.jpg",
+      text: "Публичное акционерное общество «Газпром» (ПАО «Газпром») — российская транснациональная энергетическая компания, более 50 % акций которой принадлежит государству. Является холдинговой компанией Группы «Газпром». Непосредственно ПАО «Газпром» осуществляет только продажу природного газа и сдаёт в аренду свою газотранспортную систему.",
+    },
+    nokia: {
+      title: "Nokia",
+      image: "../../../../../img/project-item-img-3.jpg",
+      text: "Nokia Corporation (фин. Nokia Oyj, произносится но́киа) — финская транснациональная компания, производитель телекоммуникационного оборудования для мобильных, фиксированных, широкополосных и IP-сетей. В 2000-е годы доминировала на мировом рынке мобильных телефонов (с 2013 года телефоны под маркой Nokia выпускаются другими производителями).",
+    },
+  };
+
+  const updateModalContent = (projectName) => {
+    const modal = document.querySelector(".modal");
+    console.log(projectName);
+    modal.querySelector(".modal-content").innerHTML = `
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">${modalData[projectName].title}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="projects-modal__image">
+          <img class="img-fluid" src="${modalData[projectName].image}" alt="">
+        </div>
+        <p class="projects-modal__text">
+          ${modalData[projectName].text}
+        </p>
+      </div>
+    </div>`;
+  };
+</script>
+  </main>
+
+  <footer class="page-footer">
+  <div class="container-fluid page-footer__inner">
+    <div class="page-footer__row row m-0">
+      <div class="col page-footer__content">
+        <h2 class="page-footer__title site-title site-title--bold">Контакты</h2>
+
+        <div class="page-footer__text">
+          <p>Коммуникационное агентство</p>
+          <p>344000, Россия, г. Ростов-на-Дону ул. Мира, д. 12 <br> Бизнес–центр «Рост», оф. 104</p>
+        </div>
+
+        <div class="page-footer__contacts d-flex">
+          <ul class="page-footer__phones-list">
+            <li>
+              <a class="page-footer__phone-link" href="tel:+78613001128">
+                +7 (861) 300-11-28
+              </a>
+            </li>
+            <li>
+              <a class="page-footer__phone-link" href="tel:+78613001152">
+                +7 (861) 300-11-52
+              </a>
+            </li>
+            <li>
+              <a class="page-footer__phone-link" href="tel:+78613001152">
+                +7 (861) 300-11-52
+              </a>
+            </li>
+          </ul>
+
+          <ul class="page-footer__add-info">
+            <li class="page-footer__add-item">
+              <span>Email:</span>
+              <a class="page-footer__add-link" href="mailto:info@example.com">info@example.com</a>
+            </li>
+            <li class="page-footer__add-item">
+              <a class="page-footer__add-link" href="#">Facebook.com/exampleagency</a>
+            </li>
+          </ul>
+        </div>
+        </p>
+      </div>
+      <div class="col page-footer__form">
+        <form class="d-flex flex-column align-items-center" action="">
+
+          <div class="page-footer__inputs">
+            <input class="site-field site-input" type="text" placeholder="Полное имя" required>
+            <input class="site-field site-input" type="text" placeholder="E-mail" required>
+            <input class="site-field site-input" type="text" placeholder="Телефон" required>
+            <textarea class="site-field site-textarea" name="task" placeholder="Пожалуйста, опишите задачу"
+              required></textarea>
+          </div>
+
+          <a class="page-footer__form-link" href="#" target="_blank">Политика обработки персональных данных</a>
+
+          <button class="site-button site-button--white" type="submit">Отправить заявку</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+</body>
+
+</html>
